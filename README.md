@@ -6,12 +6,10 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="MIT License" /></a>
   <a href="https://github.com/accomplish-ai/openwork/stargazers"><img src="https://img.shields.io/github/stars/accomplish-ai/openwork?style=flat-square&color=22c55e" alt="GitHub Stars" /></a>
   <a href="https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg"><img src="https://img.shields.io/badge/Download-macOS-0ea5e9?style=flat-square" alt="Download macOS" /></a>
-  <a href="https://downloads.accomplish.ai/downloads/0.1.0/linux/Openwork-0.1.0-linux-x64.AppImage"><img src="https://img.shields.io/badge/Download-Linux-22c55e?style=flat-square" alt="Download Linux" /></a>
 </p>
 
 <p align="center">
-  <a href="https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg"><strong>Download for Mac (Apple Silicon)</strong></a> ·
-  <a href="https://downloads.accomplish.ai/downloads/0.1.0/linux/Openwork-0.1.0-linux-x64.AppImage"><strong>Download for Linux (x64)</strong></a>
+  <a href="https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg"><strong>Download for Mac (Apple Silicon)</strong></a>
 </p>
 
 <br />
@@ -110,7 +108,7 @@
 
 | Step | Action | Details |
 |:----:|--------|---------|
-| **1** | **Install the App** | **macOS:** Download the DMG and drag to Applications<br>**Linux:** Download the AppImage, make it executable (`chmod +x`), and run |
+| **1** | **Install the App** | **macOS:** Download the DMG and drag to Applications<br>**Linux:** See [Building for Linux](#building-for-linux) below |
 | **2** | **Connect Your AI** | Use your own OpenAI or Anthropic API key. No subscriptions. |
 | **3** | **Give It Access** | Choose which folders it can see. You stay in control. |
 | **4** | **Start Working** | Ask it to summarize a doc, clean a folder, or create a report. You approve everything. |
@@ -119,7 +117,7 @@
 
 <div align="center">
 
-[**Download for Mac (Apple Silicon)**](https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg) · [**Download for Linux (x64)**](https://downloads.accomplish.ai/downloads/0.1.0/linux/Openwork-0.1.0-linux-x64.AppImage)
+[**Download for Mac (Apple Silicon)**](https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg)
 
 </div>
 
@@ -202,6 +200,38 @@ packages/
 The desktop app uses Electron with a React UI bundled via Vite. The main process spawns [OpenCode](https://github.com/sst/opencode) CLI using `node-pty` to execute tasks. API keys are stored securely in the OS keychain.
 
 See [CLAUDE.md](CLAUDE.md) for detailed architecture documentation.
+
+</details>
+
+<details>
+<summary><strong>Building for Linux</strong></summary>
+
+To build and run Openwork on Linux:
+
+**Prerequisites:**
+- Node.js 20+
+- pnpm 9+
+- Development tools for native modules (build-essential on Debian/Ubuntu)
+
+**Build AppImage (universal Linux package):**
+```bash
+pnpm install
+pnpm -F @accomplish/desktop package:linux
+```
+
+This generates `apps/desktop/release/Openwork-*-linux-x86_64.AppImage`
+
+**Run the AppImage:**
+```bash
+chmod +x apps/desktop/release/Openwork-*-linux-x86_64.AppImage
+./apps/desktop/release/Openwork-*-linux-x86_64.AppImage
+```
+
+**Build .deb package (Debian/Ubuntu):**
+The `package:linux` command also generates a `.deb` file in the same directory:
+```bash
+sudo dpkg -i apps/desktop/release/Openwork-*-linux-amd64.deb
+```
 
 </details>
 
