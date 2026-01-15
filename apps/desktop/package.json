@@ -14,8 +14,10 @@
     "build:unpack": "tsc && vite build && node scripts/package.cjs --dir",
     "package": "pnpm build && node scripts/package.cjs --mac --publish never",
     "package:mac": "pnpm build && node scripts/package.cjs --mac --publish never",
+    "package:linux": "pnpm build && node scripts/package.cjs --linux --publish never",
     "release": "pnpm build && node scripts/package.cjs --mac --publish always",
     "release:mac": "pnpm build && node scripts/package.cjs --mac --publish always",
+    "release:linux": "pnpm build && node scripts/package.cjs --linux --publish always",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit",
@@ -158,6 +160,13 @@
           "path": "/Applications"
         }
       ]
+    },
+    "linux": {
+      "category": "Utility",
+      "icon": "resources/icon.png",
+      "target": ["AppImage", "deb"],
+      "synopsis": "The open source AI coworker that lives on your desktop",
+      "description": "Openwork is a standalone desktop automation assistant that runs locally on your machine. Use your own AI API key to automate tasks, manage files, and create custom workflows."
     }
   }
 }

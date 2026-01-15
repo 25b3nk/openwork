@@ -5,11 +5,13 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="MIT License" /></a>
   <a href="https://github.com/accomplish-ai/openwork/stargazers"><img src="https://img.shields.io/github/stars/accomplish-ai/openwork?style=flat-square&color=22c55e" alt="GitHub Stars" /></a>
-  <a href="https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg"><img src="https://img.shields.io/badge/Download-macOS-0ea5e9?style=flat-square" alt="Download" /></a>
+  <a href="https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg"><img src="https://img.shields.io/badge/Download-macOS-0ea5e9?style=flat-square" alt="Download macOS" /></a>
+  <a href="https://downloads.accomplish.ai/downloads/0.1.0/linux/Openwork-0.1.0-linux-x64.AppImage"><img src="https://img.shields.io/badge/Download-Linux-22c55e?style=flat-square" alt="Download Linux" /></a>
 </p>
 
 <p align="center">
-  <a href="https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg"><strong>Download for Mac (Apple Silicon)</strong></a>
+  <a href="https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg"><strong>Download for Mac (Apple Silicon)</strong></a> ·
+  <a href="https://downloads.accomplish.ai/downloads/0.1.0/linux/Openwork-0.1.0-linux-x64.AppImage"><strong>Download for Linux (x64)</strong></a>
 </p>
 
 <br />
@@ -108,7 +110,7 @@
 
 | Step | Action | Details |
 |:----:|--------|---------|
-| **1** | **Install the App** |  the DMG and drag it into Applications |
+| **1** | **Install the App** | **macOS:** Download the DMG and drag to Applications<br>**Linux:** Download the AppImage, make it executable (`chmod +x`), and run |
 | **2** | **Connect Your AI** | Use your own OpenAI or Anthropic API key. No subscriptions. |
 | **3** | **Give It Access** | Choose which folders it can see. You stay in control. |
 | **4** | **Start Working** | Ask it to summarize a doc, clean a folder, or create a report. You approve everything. |
@@ -117,7 +119,7 @@
 
 <div align="center">
 
-[**Download for Mac (Apple Silicon)**](https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg)
+[**Download for Mac (Apple Silicon)**](https://downloads.accomplish.ai/downloads/0.1.0/macos/Openwork-0.1.0-mac-arm64.dmg) · [**Download for Linux (x64)**](https://downloads.accomplish.ai/downloads/0.1.0/linux/Openwork-0.1.0-linux-x64.AppImage)
 
 </div>
 
