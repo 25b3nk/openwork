@@ -4,6 +4,11 @@
   "private": true,
   "type": "module",
   "description": "Accomplish Desktop App",
+  "author": {
+    "name": "Accomplish Inc",
+    "email": "hello@accomplish.ai"
+  },
+  "homepage": "https://github.com/accomplish-ai/openwork",
   "main": "dist-electron/main/index.js",
   "scripts": {
     "postinstall": "electron-rebuild && npm --prefix skills/dev-browser install && npm --prefix skills/file-permission install",
@@ -165,6 +170,7 @@
       "category": "Utility",
       "icon": "resources/icon.png",
       "target": ["AppImage", "deb"],
+      "maintainer": "Accomplish Inc <hello@accomplish.ai>",
       "synopsis": "The open source AI coworker that lives on your desktop",
       "description": "Openwork is a standalone desktop automation assistant that runs locally on your machine. Use your own AI API key to automate tasks, manage files, and create custom workflows."
     }
