@@ -13,6 +13,8 @@ pnpm dev                              # Run desktop app in dev mode (Vite + Elec
 pnpm dev:clean                        # Dev mode with CLEAN_START=1 (clears stored data)
 pnpm build                            # Build all workspaces
 pnpm build:desktop                    # Build desktop app only
+pnpm -F @accomplish/desktop package:mac    # Package macOS app
+pnpm -F @accomplish/desktop package:linux  # Package Linux app (AppImage, deb)
 pnpm lint                             # TypeScript checks
 pnpm typecheck                        # Type validation
 pnpm clean                            # Clean build outputs and node_modules
